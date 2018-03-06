@@ -50,8 +50,8 @@ const giveEventLis = (coleccionHTML) => {
 const getDetailsCharacter = (e) => {
     e.preventDefault;
     //e.target.dataset.url
-    console.log(e.target.value)
-    let url = e.target.getAttribute('data-url');
+    //e.target.getAttribute('data-url')
+    let url = e.target.innerText;
     fetch(url, {method: 'GET'})
         .then(response => {
             response.json().then(result => {
